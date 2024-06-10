@@ -1,0 +1,2190 @@
+/*
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.bottom-9 {
+  bottom: 2.25rem;
+}
+
+.-bottom-96 {
+  bottom: -24rem;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.z-\[9999\] {
+  z-index: 9999;
+}
+
+.col-auto {
+  grid-column: auto;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.h-\[1000rem\] {
+  height: 1000rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.w-36 {
+  width: 9rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.max-w-72 {
+  max-width: 18rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-\[50px\] {
+  border-radius: 50px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-l-2 {
+  border-left-width: 2px;
+}
+
+.border-r-2 {
+  border-right-width: 2px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.bg-slate-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-\[\#1babda\] {
+  --tw-text-opacity: 1;
+  color: rgb(27 171 218 / var(--tw-text-opacity));
+}
+
+.text-\[\#365E7E\] {
+  --tw-text-opacity: 1;
+  color: rgb(54 94 126 / var(--tw-text-opacity));
+}
+
+.text-\[\#434343\] {
+  --tw-text-opacity: 1;
+  color: rgb(67 67 67 / var(--tw-text-opacity));
+}
+
+.text-\[\#515050\] {
+  --tw-text-opacity: 1;
+  color: rgb(81 80 80 / var(--tw-text-opacity));
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[\#1BABDB\] {
+  --tw-shadow-color: #1BABDB;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-\[350ms\] {
+  transition-duration: 350ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes blink-caret-text {
+  from, to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: currentColor;
+  }
+}
+
+@keyframes write-text {
+  from {
+    content: "";
+  }
+
+  to {
+    content: "";
+  }
+
+  0.85% {
+    content: "I";
+  }
+
+  0.48% {
+    content: "I ";
+  }
+
+  1.5% {
+    content: "I w";
+  }
+
+  1.88% {
+    content: "I wa";
+  }
+
+  1.85% {
+    content: "I wan";
+  }
+
+  2.9% {
+    content: "I want";
+  }
+
+  3.4% {
+    content: "I want ";
+  }
+
+  3.92% {
+    content: "I want t";
+  }
+
+  3.69% {
+    content: "I want to";
+  }
+
+  4.19% {
+    content: "I want to ";
+  }
+
+  5.27% {
+    content: "I want to c";
+  }
+
+  5.21% {
+    content: "I want to co";
+  }
+
+  6.11% {
+    content: "I want to col";
+  }
+
+  6.15% {
+    content: "I want to coll";
+  }
+
+  7.11% {
+    content: "I want to colla";
+  }
+
+  7.17% {
+    content: "I want to collab";
+  }
+
+  8.01% {
+    content: "I want to collabo";
+  }
+
+  7.76% {
+    content: "I want to collabor";
+  }
+
+  9.07% {
+    content: "I want to collabora";
+  }
+
+  8.83% {
+    content: "I want to collaborat";
+  }
+
+  10.02% {
+    content: "I want to collaborate";
+  }
+
+  10.32% {
+    content: "I want to collaborate ";
+  }
+
+  10.37% {
+    content: "I want to collaborate t";
+  }
+
+  11.28% {
+    content: "I want to collaborate to";
+  }
+
+  11.62% {
+    content: "I want to collaborate to ";
+  }
+
+  12.22% {
+    content: "I want to collaborate to l";
+  }
+
+  11.9% {
+    content: "I want to collaborate to le";
+  }
+
+  13% {
+    content: "I want to collaborate to lea";
+  }
+
+  13.32% {
+    content: "I want to collaborate to lear";
+  }
+
+  13.25% {
+    content: "I want to collaborate to learn";
+  }
+
+  13.81% {
+    content: "I want to collaborate to learn ";
+  }
+
+  15.01% {
+    content: "I want to collaborate to learn a";
+  }
+
+  14.94% {
+    content: "I want to collaborate to learn an";
+  }
+
+  16.05% {
+    content: "I want to collaborate to learn and ";
+  }
+
+  15.97% {
+    content: "I want to collaborate to learn and c";
+  }
+
+  16.97% {
+    content: "I want to collaborate to learn and cr";
+  }
+
+  17.52% {
+    content: "I want to collaborate to learn and cre";
+  }
+
+  17.64% {
+    content: "I want to collaborate to learn and crea";
+  }
+
+  18.32% {
+    content: "I want to collaborate to learn and creat";
+  }
+
+  18.51% {
+    content: "I want to collaborate to learn and create";
+  }
+
+  19.16% {
+    content: "I want to collaborate to learn and create ";
+  }
+
+  19.71% {
+    content: "I want to collaborate to learn and create n";
+  }
+
+  20.37% {
+    content: "I want to collaborate to learn and create ne";
+  }
+
+  20.72% {
+    content: "I want to collaborate to learn and create new";
+  }
+
+  20.97% {
+    content: "I want to collaborate to learn and create new ";
+  }
+
+  21.61% {
+    content: "I want to collaborate to learn and create new t";
+  }
+
+  21.8% {
+    content: "I want to collaborate to learn and create new th";
+  }
+
+  22.37% {
+    content: "I want to collaborate to learn and create new thi";
+  }
+
+  22.66% {
+    content: "I want to collaborate to learn and create new thin";
+  }
+
+  23.45% {
+    content: "I want to collaborate to learn and create new thing";
+  }
+
+  23.9% {
+    content: "I want to collaborate to learn and create new things";
+  }
+
+  24.28%, 30.38% {
+    content: "I want to collaborate to learn and create new things ";
+  }
+
+  30.53% {
+    content: "I want to collaborate to learn and create new things";
+  }
+
+  30.68% {
+    content: "I want to collaborate to learn and create new thing";
+  }
+
+  30.84% {
+    content: "I want to collaborate to learn and create new thin";
+  }
+
+  30.99% {
+    content: "I want to collaborate to learn and create new thi";
+  }
+
+  31.14% {
+    content: "I want to collaborate to learn and create new th";
+  }
+
+  31.29% {
+    content: "I want to collaborate to learn and create new t";
+  }
+
+  31.45% {
+    content: "I want to collaborate to learn and create new ";
+  }
+
+  31.6% {
+    content: "I want to collaborate to learn and create new";
+  }
+
+  31.75% {
+    content: "I want to collaborate to learn and create ne";
+  }
+
+  31.9% {
+    content: "I want to collaborate to learn and create n";
+  }
+
+  32.06% {
+    content: "I want to collaborate to learn and create ";
+  }
+
+  32.21% {
+    content: "I want to collaborate to learn and create";
+  }
+
+  32.36% {
+    content: "I want to collaborate to learn and creat";
+  }
+
+  32.51% {
+    content: "I want to collaborate to learn and crea";
+  }
+
+  32.67% {
+    content: "I want to collaborate to learn and cre";
+  }
+
+  32.82% {
+    content: "I want to collaborate to learn and cr";
+  }
+
+  32.97% {
+    content: "I want to collaborate to learn and c";
+  }
+
+  33.12% {
+    content: "I want to collaborate to learn and ";
+  }
+
+  33.28% {
+    content: "I want to collaborate to learn and";
+  }
+
+  33.43% {
+    content: "I want to collaborate to learn an";
+  }
+
+  33.58% {
+    content: "I want to collaborate to learn a";
+  }
+
+  33.73% {
+    content: "I want to collaborate to learn ";
+  }
+
+  33.89% {
+    content: "I want to collaborate to learn";
+  }
+
+  34.04% {
+    content: "I want to collaborate to lear";
+  }
+
+  34.19% {
+    content: "I want to collaborate to lea";
+  }
+
+  34.34% {
+    content: "I want to collaborate to le";
+  }
+
+  34.5% {
+    content: "I want to collaborate to l";
+  }
+
+  34.65% {
+    content: "I want to collaborate to ";
+  }
+
+  34.8% {
+    content: "I want to collaborate to";
+  }
+
+  34.95% {
+    content: "I want to collaborate t";
+  }
+
+  35.11% {
+    content: "I want to collaborate ";
+  }
+
+  35.26% {
+    content: "I want to collaborate";
+  }
+
+  35.41% {
+    content: "I want to collaborat";
+  }
+
+  35.56% {
+    content: "I want to collabora";
+  }
+
+  35.72% {
+    content: "I want to collabor";
+  }
+
+  35.87% {
+    content: "I want to collabo";
+  }
+
+  36.02% {
+    content: "I want to collab";
+  }
+
+  36.17% {
+    content: "I want to colla";
+  }
+
+  36.33% {
+    content: "I want to coll";
+  }
+
+  36.48% {
+    content: "I want to col";
+  }
+
+  36.63% {
+    content: "I want to co";
+  }
+
+  36.78% {
+    content: "I want to c";
+  }
+
+  36.93% {
+    content: "I want to ";
+  }
+
+  37.09% {
+    content: "I want to";
+  }
+
+  37.24% {
+    content: "I want t";
+  }
+
+  37.39% {
+    content: "I want ";
+  }
+
+  37.54% {
+    content: "I want";
+  }
+
+  37.7% {
+    content: "I wan";
+  }
+
+  37.85% {
+    content: "I wa";
+  }
+
+  38% {
+    content: "I w";
+  }
+
+  38.15% {
+    content: "I ";
+  }
+
+  38.31% {
+    content: "I";
+  }
+
+  38.46% {
+    content: "";
+  }
+
+  39.09% {
+    content: "l";
+  }
+
+  38.93% {
+    content: "le";
+  }
+
+  40.15% {
+    content: "let";
+  }
+
+  40.68% {
+    content: "lets";
+  }
+
+  40.75% {
+    content: "lets ";
+  }
+
+  41.33% {
+    content: "lets b";
+  }
+
+  42.14% {
+    content: "lets bu";
+  }
+
+  41.87% {
+    content: "lets bui";
+  }
+
+  42.9% {
+    content: "lets buil";
+  }
+
+  43.06% {
+    content: "lets build";
+  }
+
+  43% {
+    content: "lets build ";
+  }
+
+  44.03% {
+    content: "lets build s";
+  }
+
+  44.87% {
+    content: "lets build so";
+  }
+
+  44.74% {
+    content: "lets build som";
+  }
+
+  45.11% {
+    content: "lets build some";
+  }
+
+  45.53% {
+    content: "lets build somet";
+  }
+
+  45.87% {
+    content: "lets build someth";
+  }
+
+  46.22% {
+    content: "lets build somethi";
+  }
+
+  47.06% {
+    content: "lets build somethin";
+  }
+
+  47.32% {
+    content: "lets build something";
+  }
+
+  47.79% {
+    content: "lets build something ";
+  }
+
+  48.61% {
+    content: "lets build something a";
+  }
+
+  49.1% {
+    content: "lets build something am";
+  }
+
+  49.7% {
+    content: "lets build something ama";
+  }
+
+  49.73% {
+    content: "lets build something amaz";
+  }
+
+  50.36% {
+    content: "lets build something amazi";
+  }
+
+  51.11% {
+    content: "lets build something amazin";
+  }
+
+  50.92% {
+    content: "lets build something amazing";
+  }
+
+  52.02% {
+    content: "lets build something amazing ";
+  }
+
+  52.38% {
+    content: "lets build something amazing t";
+  }
+
+  52.45% {
+    content: "lets build something amazing to";
+  }
+
+  53.39% {
+    content: "lets build something amazing tog";
+  }
+
+  53.17% {
+    content: "lets build something amazing toge";
+  }
+
+  53.98% {
+    content: "lets build something amazing toget";
+  }
+
+  53.99% {
+    content: "lets build something amazing togeth";
+  }
+
+  55.4% {
+    content: "lets build something amazing togethe";
+  }
+
+  54.9% {
+    content: "lets build something amazing together";
+  }
+
+  56.04%, 62.14% {
+    content: "lets build something amazing together!";
+  }
+
+  62.29% {
+    content: "lets build something amazing together";
+  }
+
+  62.45% {
+    content: "lets build something amazing togethe";
+  }
+
+  62.6% {
+    content: "lets build something amazing togeth";
+  }
+
+  62.75% {
+    content: "lets build something amazing toget";
+  }
+
+  62.9% {
+    content: "lets build something amazing toge";
+  }
+
+  63.06% {
+    content: "lets build something amazing tog";
+  }
+
+  63.21% {
+    content: "lets build something amazing to";
+  }
+
+  63.36% {
+    content: "lets build something amazing t";
+  }
+
+  63.51% {
+    content: "lets build something amazing ";
+  }
+
+  63.67% {
+    content: "lets build something amazing";
+  }
+
+  63.82% {
+    content: "lets build something amazin";
+  }
+
+  63.97% {
+    content: "lets build something amazi";
+  }
+
+  64.12% {
+    content: "lets build something amaz";
+  }
+
+  64.28% {
+    content: "lets build something ama";
+  }
+
+  64.43% {
+    content: "lets build something am";
+  }
+
+  64.58% {
+    content: "lets build something a";
+  }
+
+  64.73% {
+    content: "lets build something ";
+  }
+
+  64.89% {
+    content: "lets build something";
+  }
+
+  65.04% {
+    content: "lets build somethin";
+  }
+
+  65.19% {
+    content: "lets build somethi";
+  }
+
+  65.34% {
+    content: "lets build someth";
+  }
+
+  65.5% {
+    content: "lets build somet";
+  }
+
+  65.65% {
+    content: "lets build some";
+  }
+
+  65.8% {
+    content: "lets build som";
+  }
+
+  65.95% {
+    content: "lets build so";
+  }
+
+  66.11% {
+    content: "lets build s";
+  }
+
+  66.26% {
+    content: "lets build ";
+  }
+
+  66.41% {
+    content: "lets build";
+  }
+
+  66.56% {
+    content: "lets buil";
+  }
+
+  66.72% {
+    content: "lets bui";
+  }
+
+  66.87% {
+    content: "lets bu";
+  }
+
+  67.02% {
+    content: "lets b";
+  }
+
+  67.17% {
+    content: "lets ";
+  }
+
+  67.33% {
+    content: "lets";
+  }
+
+  67.48% {
+    content: "let";
+  }
+
+  67.63% {
+    content: "le";
+  }
+
+  67.78% {
+    content: "l";
+  }
+
+  67.93% {
+    content: "";
+  }
+
+  68.61% {
+    content: "E";
+  }
+
+  68.46% {
+    content: "Ex";
+  }
+
+  69.45% {
+    content: "Exp";
+  }
+
+  69.98% {
+    content: "Expl";
+  }
+
+  70.17% {
+    content: "Explo";
+  }
+
+  70.36% {
+    content: "Explor";
+  }
+
+  71.45% {
+    content: "Explori";
+  }
+
+  71.91% {
+    content: "Explorin";
+  }
+
+  71.62% {
+    content: "Exploring";
+  }
+
+  72.96% {
+    content: "Exploring ";
+  }
+
+  73.35% {
+    content: "Exploring a";
+  }
+
+  73.77% {
+    content: "Exploring a ";
+  }
+
+  73.73% {
+    content: "Exploring a w";
+  }
+
+  74.7% {
+    content: "Exploring a wo";
+  }
+
+  75.15% {
+    content: "Exploring a worl";
+  }
+
+  76.07% {
+    content: "Exploring a world";
+  }
+
+  76.34% {
+    content: "Exploring a world ";
+  }
+
+  76.92% {
+    content: "Exploring a world o";
+  }
+
+  77.54% {
+    content: "Exploring a world of";
+  }
+
+  77.76% {
+    content: "Exploring a world of ";
+  }
+
+  78.08% {
+    content: "Exploring a world of e";
+  }
+
+  78.43% {
+    content: "Exploring a world of en";
+  }
+
+  79.25% {
+    content: "Exploring a world of end";
+  }
+
+  79.06% {
+    content: "Exploring a world of endl";
+  }
+
+  79.78% {
+    content: "Exploring a world of endle";
+  }
+
+  80.14% {
+    content: "Exploring a world of endles";
+  }
+
+  81.11% {
+    content: "Exploring a world of endless";
+  }
+
+  80.86% {
+    content: "Exploring a world of endless ";
+  }
+
+  81.66% {
+    content: "Exploring a world of endless p";
+  }
+
+  82.49% {
+    content: "Exploring a world of endless po";
+  }
+
+  82.43% {
+    content: "Exploring a world of endless pos";
+  }
+
+  82.82% {
+    content: "Exploring a world of endless poss";
+  }
+
+  83.19% {
+    content: "Exploring a world of endless possi";
+  }
+
+  83.82% {
+    content: "Exploring a world of endless possib";
+  }
+
+  84.78% {
+    content: "Exploring a world of endless possibi";
+  }
+
+  84.47% {
+    content: "Exploring a world of endless possibil";
+  }
+
+  85.54% {
+    content: "Exploring a world of endless possibili";
+  }
+
+  85.89% {
+    content: "Exploring a world of endless possibilit";
+  }
+
+  86.37% {
+    content: "Exploring a world of endless possibiliti";
+  }
+
+  87.02% {
+    content: "Exploring a world of endless possibilitie";
+  }
+
+  86.98% {
+    content: "Exploring a world of endless possibilities";
+  }
+
+  87.66%, 93.76% {
+    content: "Exploring a world of endless possibilities.";
+  }
+
+  93.91% {
+    content: "Exploring a world of endless possibilities";
+  }
+
+  94.06% {
+    content: "Exploring a world of endless possibilitie";
+  }
+
+  94.21% {
+    content: "Exploring a world of endless possibiliti";
+  }
+
+  94.37% {
+    content: "Exploring a world of endless possibilit";
+  }
+
+  94.52% {
+    content: "Exploring a world of endless possibili";
+  }
+
+  94.67% {
+    content: "Exploring a world of endless possibil";
+  }
+
+  94.82% {
+    content: "Exploring a world of endless possibi";
+  }
+
+  94.98% {
+    content: "Exploring a world of endless possib";
+  }
+
+  95.13% {
+    content: "Exploring a world of endless possi";
+  }
+
+  95.28% {
+    content: "Exploring a world of endless poss";
+  }
+
+  95.43% {
+    content: "Exploring a world of endless pos";
+  }
+
+  95.59% {
+    content: "Exploring a world of endless po";
+  }
+
+  95.74% {
+    content: "Exploring a world of endless p";
+  }
+
+  95.89% {
+    content: "Exploring a world of endless ";
+  }
+
+  96.04% {
+    content: "Exploring a world of endless";
+  }
+
+  96.2% {
+    content: "Exploring a world of endles";
+  }
+
+  96.35% {
+    content: "Exploring a world of endle";
+  }
+
+  96.5% {
+    content: "Exploring a world of endl";
+  }
+
+  96.65% {
+    content: "Exploring a world of end";
+  }
+
+  96.81% {
+    content: "Exploring a world of en";
+  }
+
+  96.96% {
+    content: "Exploring a world of e";
+  }
+
+  97.11% {
+    content: "Exploring a world of ";
+  }
+
+  97.26% {
+    content: "Exploring a world of";
+  }
+
+  97.42% {
+    content: "Exploring a world o";
+  }
+
+  97.57% {
+    content: "Exploring a world ";
+  }
+
+  97.72% {
+    content: "Exploring a world";
+  }
+
+  97.87% {
+    content: "Exploring a worl";
+  }
+
+  98.03% {
+    content: "Exploring a wor";
+  }
+
+  98.18% {
+    content: "Exploring a wo";
+  }
+
+  98.33% {
+    content: "Exploring a w";
+  }
+
+  98.48% {
+    content: "Exploring a ";
+  }
+
+  98.64% {
+    content: "Exploring a";
+  }
+
+  98.79% {
+    content: "Exploring ";
+  }
+
+  98.94% {
+    content: "Exploring";
+  }
+
+  99.09% {
+    content: "Explorin";
+  }
+
+  99.25% {
+    content: "Explori";
+  }
+
+  99.4% {
+    content: "Explor";
+  }
+
+  99.55% {
+    content: "Explo";
+  }
+
+  99.7% {
+    content: "Expl";
+  }
+
+  99.85% {
+    content: "Exp";
+  }
+
+  100.01% {
+    content: "Ex";
+  }
+
+  100.16% {
+    content: "E";
+  }
+
+  100.31% {
+    content: "";
+  }
+}
+
+.type-text::after {
+  content: "";
+  border-right: 1px solid currentColor;
+  padding-right: 0.1em;
+  animation: blink-caret-text 0.8s infinite, write-text 65.60000000000001s 3s infinite forwards;
+  transition: border-color 50ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:rounded-md:hover {
+  border-radius: 0.375rem;
+}
+
+.hover\:bg-\[\#1BABDB\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 171 219 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.hover\:p-2:hover {
+  padding: 0.5rem;
+}
+
+.hover\:px-4:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hover\:py-2:hover {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.hover\:text-blue-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-none:hover {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 768px) {
+  .md\:w-3\/6 {
+    width: 50%;
+  }
+
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+}
